@@ -11,7 +11,7 @@ export default function Home() {
         <div className="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-xl space-y-6 text-center sm:text-right sm:ml-auto mt-20 sm:mt-0">
             <h1 className="text-20xl sm:text-5xl font-bold leading-tight">
-              <div className="text-20xl">Your Name</div>
+              <div className="text-20xl px-10"> Prashant Shinde</div>
               <span className="block text-base sm:text-xl font-medium">
                 Video Editor
               </span>
@@ -68,9 +68,31 @@ export default function Home() {
       {/* <div className="grid place-items-center mt-10 sm:mt-20 px-4 bg-red-400">
         
       </div>  */}
-      <div className="grid place-items-center  px-4 bg-gray-300 h-[1000px]">
-        {/* Content goes here if needed */}
+      <div className="px-4 py-10 bg-gray-300">
+  <h2 className="text-3xl font-bold text-center mb-8 text-black">Recent Work</h2>
+  <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center">
+    {[
+      "https://www.youtube.com/embed/y28pNO8V6Hc?si=3JvpvRe4vOSz3as1",
+      "https://www.youtube.com/embed/HVeQXC7v9aY?si=yWpqyqyYkthN2EBT" 
+      
+      
+    ].map((url, i) => (
+      <div key={i} className="w-[290px] h-[450px]">
+        <iframe
+          width="100%"
+          height="100%"
+          src={url}
+          title={`YouTube video ${i + 1}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Footer heading */}
       {/* <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">

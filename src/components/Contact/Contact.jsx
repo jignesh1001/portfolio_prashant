@@ -39,7 +39,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Acme Inc, Street, State, Postal Code
+                                    Mumbai Maharashtra India
                                 </div>
                             </div>
 
@@ -61,7 +61,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +44 1234567890
+                                    +91 98926 89801
                                 </div>
                             </div>
 
@@ -83,7 +83,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    info@acme.org
+                                    Prashnat.shinde30701@gmail.com
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ export default function Contact() {
                         <form className="p-6 flex flex-col justify-center">
                             <div className="flex flex-col">
                                 <label for="name" className="hidden">
-                                    Full Name
+                                    Name
                                 </label>
                                 <input
                                     type="name"
@@ -124,6 +124,19 @@ export default function Contact() {
                                     name="tel"
                                     id="tel"
                                     placeholder="Telephone Number"
+                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col mt-2">
+                                <label for="text" className="hidden">
+                                    Number
+                                </label>
+                                <textarea
+                                    type="text"
+                                    name="text"
+                                    id="text"
+                                    placeholder="Write your Message"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
