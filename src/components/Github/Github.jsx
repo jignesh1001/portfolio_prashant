@@ -2,8 +2,8 @@ import React, { useEffect,useState } from 'react'
 
 function Github() {
   const [data,setData] = useState([])
-  useEffect(() => {
-    fetch('http://api.github.com/users/jignesh1001')
+  useEffect(() => { 
+    fetch('https://api.github.com/users/jignesh1001')
     .then(response => response.json())
     .then(data => {
         console.log(data)
