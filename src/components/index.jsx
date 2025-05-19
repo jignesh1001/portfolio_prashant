@@ -5,5 +5,6 @@ import Header from "./Header/Header";
 import Home from "./Home/Home";
 import User from "./User/User";
 import Github from "./Github/Github";
+import { CardDefault } from "./Card/Card";
 
 export {About,Contact,Footer,Header,Home,User,Github}
