@@ -1,7 +1,31 @@
-import React from 'react'
-
+import React,{useRef} from 'react'
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_5i7vuv8', // replace with your EmailJS service ID
+        'template_pcniet7', // replace with your EmailJS template ID
+        form.current,
+        'pQ22QSr3rxQjhUvh-' // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.log(error.text);
+        }
+      );
+  };
     return (
         <div className="relative flex items-top justify-center min-h-[700px] bg-white sm:items-center sm:pt-0">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -88,7 +112,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form className="p-6 flex flex-col justify-center">
+                        <form  onSubmit = {sendEmail} ref = {form}className="p-6 flex flex-col justify-center">
                             <div className="flex flex-col">
                                 <label for="name" className="hidden">
                                     Name
@@ -130,7 +154,7 @@ export default function Contact() {
 
                             <div className="flex flex-col mt-2">
                                 <label for="text" className="hidden">
-                                    Number
+                                    text
                                 </label>
                                 <textarea
                                     type="text"

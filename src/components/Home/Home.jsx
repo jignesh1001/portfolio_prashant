@@ -74,8 +74,7 @@ export default function Home() {
     {[
       "https://www.youtube.com/embed/y28pNO8V6Hc?si=3JvpvRe4vOSz3as1",
       "https://www.youtube.com/embed/HVeQXC7v9aY?si=yWpqyqyYkthN2EBT" 
-      
-      
+    
     ].map((url, i) => (
       <div key={i} className="w-[290px] h-[450px]">
         <iframe
