@@ -119,7 +119,7 @@ export default function Contact() {
                                 </label>
                                 <input
                                     type="name"
-                                    name="name"
+                                    name="user_name"
                                     id="name"
                                     placeholder="Full Name"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
@@ -132,7 +132,7 @@ export default function Contact() {
                                 </label>
                                 <input
                                     type="email"
-                                    name="email"
+                                    name="user_email"
                                     id="email"
                                     placeholder="Email"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
@@ -145,7 +145,7 @@ export default function Contact() {
                                 </label>
                                 <input
                                     type="tel"
-                                    name="tel"
+                                    name="user_phone"
                                     id="tel"
                                     placeholder="Telephone Number"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
@@ -158,7 +158,7 @@ export default function Contact() {
                                 </label>
                                 <textarea
                                     type="text"
-                                    name="text"
+                                    name="message"
                                     id="text"
                                     placeholder="Write your Message"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
