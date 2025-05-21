@@ -107,7 +107,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Prashnat.shinde30701@gmail.com
+                                    prashnat.shinde30701@gmail.com
                                 </div>
                             </div>
                         </div>
