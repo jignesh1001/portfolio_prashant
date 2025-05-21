@@ -1,7 +1,31 @@
-import React from 'react'
-
+import React,{useRef} from 'react'
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_5i7vuv8', // replace with your EmailJS service ID
+        'template_5hmahsg', // replace with your EmailJS template ID
+        form.current,
+        'pQ22QSr3rxQjhUvh-' // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.log(error.text);
+        }
+      );
+  };
     return (
         <div className="relative flex items-top justify-center min-h-[700px] bg-white sm:items-center sm:pt-0">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -39,7 +63,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Acme Inc, Street, State, Postal Code
+                                    Mumbai Maharashtra India
                                 </div>
                             </div>
 
@@ -61,7 +85,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +44 1234567890
+                                    +91 98926 89801
                                 </div>
                             </div>
 
@@ -83,19 +107,19 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    info@acme.org
+                                    prashnat.shinde30701@gmail.com
                                 </div>
                             </div>
                         </div>
 
-                        <form className="p-6 flex flex-col justify-center">
+                        <form  onSubmit = {sendEmail} ref = {form}className="p-6 flex flex-col justify-center">
                             <div className="flex flex-col">
                                 <label for="name" className="hidden">
-                                    Full Name
+                                    Name
                                 </label>
                                 <input
                                     type="name"
-                                    name="name"
+                                    name="user_name"
                                     id="name"
                                     placeholder="Full Name"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
@@ -108,7 +132,7 @@ export default function Contact() {
                                 </label>
                                 <input
                                     type="email"
-                                    name="email"
+                                    name="user_email"
                                     id="email"
                                     placeholder="Email"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
@@ -121,9 +145,22 @@ export default function Contact() {
                                 </label>
                                 <input
                                     type="tel"
-                                    name="tel"
+                                    name="user_phone"
                                     id="tel"
                                     placeholder="Telephone Number"
+                                    className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                                />
+                            </div>
+
+                            <div className="flex flex-col mt-2">
+                                <label for="text" className="hidden">
+                                    text
+                                </label>
+                                <textarea
+                                    type="text"
+                                    name="message"
+                                    id="text"
+                                    placeholder="Write your Message"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
