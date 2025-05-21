@@ -9,6 +9,8 @@ import Layout from './Layout.jsx'
 // import Contact from './components/Contact/Contact.jsx'
 
 import {About,Contact,Footer,Header,Home,User,Github} from './components';
+import { githubInfoLoader } from './components/Github/Github.jsx'
+import Text from './components/Text.jsx'
 
 
 // const router = createBrowserRouter([
@@ -32,17 +34,41 @@ import {About,Contact,Footer,Header,Home,User,Github} from './components';
 //   }
 // ])
 
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <Route path='/' element={<Layout/>}>
+//        <Route path="" element={<Home/>}/>
+//        <Route path="about" element={<About/>}>
+//         <Route path="test" element={<Github/>}/> 
+//         </Route>
+//        <Route path="contact" element={<Contact/>}/>
+//        <Route path="user/:userid" element={<User/>}/>
+//        <Route 
+//        loader={githubInfoLoader}
+//        path="github"
+//         element={<Github/>}/>
+//     </Route>
+//   )
+// )
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
-       <Route path="" element={<Home/>}/>
+       <Route path="" element={<Home/>} />
        <Route path="about" element={<About/>}/>
-       <Route path="contact" element={<Contact/>}/>
-       <Route path="user/:userid" element={<User/>}/>
-       <Route path="github" element={<Github/>}/>
+       <Route path="contact" element={<Contact/>} />
+       <Route path="user/:userid" element={<User/>} />
+       <Route 
+         path="github"
+         loader={githubInfoLoader}
+         element={<Github />} 
+       />
+        
     </Route>
   )
-)
+);
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
