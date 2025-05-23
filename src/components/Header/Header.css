@@ -1,0 +1,30 @@
+/* Dark Theme */
+header {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Universal component styles */
+a {
+  color: #4ea8de;
+}
+
+button {
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+input, textarea {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
