@@ -10,7 +10,7 @@ export default function Contact() {
     emailjs
       .sendForm(
         'service_5i7vuv8', // replace with your EmailJS service ID
-        'template_5hmahsg', // replace with your EmailJS template ID
+        'template_pcniet7', // replace with your EmailJS template ID
         form.current,
         'pQ22QSr3rxQjhUvh-' // replace with your EmailJS public key
       )
